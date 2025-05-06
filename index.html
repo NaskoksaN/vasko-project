@@ -1,285 +1,111 @@
 <!DOCTYPE html>
 <html lang="bg">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mainstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Уроци по френски и немски език</title>
-    <style>
-        /* CSS тук */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
-
-        header nav ul {
-            display: flex;
-            list-style: none;
-            background-color: #333;
-            padding: 10px;
-            margin: 0;
-            justify-content: center;
-        }
-
-        header nav ul li {
-            margin: 0 15px;
-        }
-
-        header nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 5px 10px;
-        }
-
-        header nav ul li a:hover {
-            background: #555;
-            border-radius: 5px;
-        }
-
-        .carousel {
-            padding: 1em;
-            position: relative;
-            height: 400px;
-            background: #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .slide {
-            display: none;
-            text-align: center;
-        }
-
-        .slide.active {
-            display: block;
-            animation: fade 1s;
-        }
-
-        .slide img {
-            max-width: 35%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        @keyframes fade {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-
-        button.prev, button.next {
-            position: absolute;
-            top: 50%;
-            background-color: rgba(0,0,0,0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 18px;
-            transform: translateY(-50%);
-            border-radius: 50%;
-        }
-
-        button.prev:hover, button.next:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
-
-        button.prev {
-            left: 10px;
-        }
-
-        button.next {
-            right: 10px;
-        }
-
-        .courses {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 40px;
-    background: #f9f9f9;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.course-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 1rem;
-    color: #555;
-}
-
-        .teacher {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px;
-            background: #fff;
-        }
-
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 3px solid #333;
-        }
-
-        .teacher-info {
-            max-width: 600px;
-            text-align: center;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        footer a {
-            color: white;
-            margin: 0 20px;  /* Разстояние между иконите */
-            font-size: 40px; /* Големи икони */
-            text-decoration: none;
-        }
-        footer a:hover {
-            color: #f1c40f; /* Жълт цвят при ховърване */
-        }
-    </style>
+    <title>Learning bulgarian is easy</title>
 </head>
+
 <body>
-
-    <!-- Навигация -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#teacher">Teacher</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Карусел -->
-    <section id="home" class="carousel">
-        <div class="slide active">
-            <img src="fr.png" alt="Cours de bulgare">
-            <h2>Cours de bulgare pour les Français</h2>
-<p>Français ? Apprenez le bulgare facilement et rapidement !</p>
-        </div>
-        <div class="slide">
-            <img src="de.png" alt="Bulgarischkurs">
-            <h2>Bulgarisch lernen für Deutsche</h2>
-            <p>Du bist Deutscher? Zeit, Bulgarisch zu meistern – einfach, schnell und mit Spaß!</p>
-        </div>
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-    </section>
-
-    <!-- Курсове -->
-    <section id="courses" class="courses">
-        <div class="card">
-            <img src="fr beginner.jpg" alt="Bulgare pour débutants" class="course-image">
-            <h3>Bulgare pour débutants</h3>
-            <p><strong>Durée :</strong> 3 mois</p>
-            <p><em>Oubliez « Bonjour » et lancez-vous avec un tonnerre de « Здравей » !</em></p>
-            <p>Apprenez les bases : <strong>merci</strong> devient <strong>благодаря</strong>, <strong>oui</strong> devient <strong>да</strong>, et préparez-vous à commander un café avec style bulgare ! Pas besoin de diplôme, juste votre bonne humeur et un soupçon de хумор !</p>
-        </div>
+    <div class="wrapper">
         
-        <div class="card">
-            <img src="fr intermedia.jpg" alt="Bulgare pour avancés" class="course-image">
-            <h3>Bulgare pour avancés</h3>
-            <p><strong>Durée :</strong> 4 mois</p>
-            <p><em>Prêts à enchaîner « Как си? » après « Ça va? » ? C’est tout un art !</em></p>
-            <p>Perfectionnez votre bulgare : dialogues quotidiens, expressions comme <strong>„Моля“</strong> (pour « s’il vous plaît »), et éclats de rire garantis — vous parlerez bientôt comme un vrai българин !</p>
-        </div>
-        <div class="card">
-            <img src="de beginer.jpg" alt="Bulgarisch für Anfänger" class="course-image">
-            <h3>Bulgarisch für Anfänger</h3>
-            <p><strong>Dauer:</strong> 3 Monate</p>
-            <p><em>Vergessen Sie „Hallo“ und begrüßen Sie mit einem kräftigen „Здравей“!</em></p>
-            <p>Lernen Sie die Basics: „danke“ wird zu <strong>благодаря</strong>, „bitte“ zu <strong>моля</strong> – und schon können Sie Ihr erstes bulgarisches Kaffee-„малко захар“ bestellen! Ein Kurs voller Spaß und einem Hauch von хумор!</p>
-        </div>
-        
-        <div class="card">
-            <img src="de intermedia.jpg" alt="Bulgarisch für Fortgeschrittene" class="course-image">
-            <h3>Bulgarisch für Fortgeschrittene</h3>
-            <p><strong>Dauer:</strong> 4 Monate</p>
-            <p><em>Bereit für ein „Как си?“ nach Ihrem „Wie geht’s?“?</em></p>
-            <p>Feinabstimmung Ihres bulgarischen Wortschatzes: Alltagstaugliche Dialoge, Ausdrücke wie <strong>„проблем няма“</strong> (kein Problem) und herzhaftes Lachen über bulgarische Scherze!</p>
-        </div>
-    </section>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#teacher">Teacher</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- Преподавател -->
-    <section id="teacher" class="teacher">
-        <img src="vasil.bmp" alt="Преподавател" class="profile-pic">
-        <div class="teacher-info">
-            <h2>Vasil Panajotov</h2>
-            <p>I am an experienced French and German teacher with over 10 years of practice. I work with foreigners from different countries and will help you achieve your language goals quickly and effectively!</p>
-        </div>
-    </section>
+        <section id="home" class="carousel">
+            <div class="slide active">
+                <img src="img/fr.png" alt="Cours de bulgare">
+            </div>
+            <div class="slide">
+                <img src="img/de.png" alt="Bulgarischkurs">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </section>
 
-    <!-- Контакт -->
-    <footer id="contact">
-        <h3>Contact with me</h3>
-        <p>E-mail: contact@example.com</p>
-        <p>Phone: +359 888 123 456</p>
-        <div>
-            <a href="https://www.facebook.com/yourprofile" target="_blank">
-                <i class="fab fa-facebook"></i>
+        <section id="courses" class="courses">
+            <div class="card">
+                <img src="img/fr beginner.jpg" alt="Bulgare pour débutants" class="course-image">
+                <h3>Bulgare pour débutants</h3>
+                <p><strong>Durée :</strong> 3 mois</p>
+                <p><em>Oubliez « Bonjour » et lancez-vous avec un tonnerre de « Здравей » !</em></p>
+                <p>Apprenez les bases : <strong>merci</strong> devient <strong>благодаря</strong>, <strong>oui</strong>
+                    devient <strong>да</strong>, et préparez-vous à commander un café avec style bulgare ! Pas besoin de
+                    diplôme, juste votre bonne humeur et un soupçon de хумор !</p>
+            </div>
+
+            <div class="card">
+                <img src="img/fr intermedia.jpg" alt="Bulgare pour avancés" class="course-image">
+                <h3>Bulgare pour avancés</h3>
+                <p><strong>Durée :</strong> 4 mois</p>
+                <p><em>Prêts à enchaîner « Как си? » après « Ça va? » ? C’est tout un art !</em></p>
+                <p>Perfectionnez votre bulgare : dialogues quotidiens, expressions comme <strong>„Моля“</strong> (pour «
+                    s’il vous plaît »), et éclats de rire garantis — vous parlerez bientôt comme un vrai българин !</p>
+            </div>
+            <div class="card">
+                <img src="img/de beginer.jpg" alt="Bulgarisch für Anfänger" class="course-image">
+                <h3>Bulgarisch für Anfänger</h3>
+                <p><strong>Dauer:</strong> 3 Monate</p>
+                <p><em>Vergessen Sie „Hallo“ und begrüßen Sie mit einem kräftigen „Здравей“!</em></p>
+                <p>Lernen Sie die Basics: „danke“ wird zu <strong>благодаря</strong>, „bitte“ zu <strong>моля</strong> –
+                    und
+                    schon können Sie Ihr erstes bulgarisches Kaffee-„малко захар“ bestellen! Ein Kurs voller Spaß und
+                    einem
+                    Hauch von хумор!</p>
+            </div>
+
+            <div class="card">
+                <img src="img/de intermedia.jpg" alt="Bulgarisch für Fortgeschrittene" class="course-image">
+                <h3>Bulgarisch für Fortgeschrittene</h3>
+                <p><strong>Dauer:</strong> 4 Monate</p>
+                <p><em>Bereit für ein „Как си?“ nach Ihrem „Wie geht’s?“?</em></p>
+                <p>Feinabstimmung Ihres bulgarischen Wortschatzes: Alltagstaugliche Dialoge, Ausdrücke wie
+                    <strong>„проблем
+                        няма“</strong> (kein Problem) und herzhaftes Lachen über bulgarische Scherze!
+                </p>
+            </div>
+        </section>
+
+        <section id="teacher" class="teacher">
+            <img src="img/vasil.bmp" alt="Преподавател" class="profile-pic">
+            <div class="teacher-info">
+                <h2>Vasil Panajotov</h2>
+                <p>I am an experienced French and German teacher with over 10 years of practice. I work with foreigners
+                    from
+                    different countries and will help you achieve your language goals quickly and effectively!</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+            <p>You can reach me via email or phone:</p>
+            <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
+            <p>Phone: 0888 888 888</p>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; Atanas Bobchev</p>
+            <a href="https://www.linkedin.com/in/atanas-bobchev-62a99b289/" target="_blank" aria-label="LinkedIn">
+                <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
             </a>
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-    </footer>
+        </footer>
 
-    <script>
-        // Карусел логика
-        const slides = document.querySelectorAll('.slide');
-        let currentSlide = 0;
+    </div>
 
-        document.querySelector('.next').addEventListener('click', () => {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add('active');
-        });
+    <script src="js/main.js"></script>
 
-        document.querySelector('.prev').addEventListener('click', () => {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            slides[currentSlide].classList.add('active');
-        });
-    </script>
 
 </body>
+
 </html>
