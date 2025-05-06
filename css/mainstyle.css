@@ -188,7 +188,7 @@ button.next {
     display: flex;
     flex-direction: column;
     gap: 10px;  
-    width: 30%;                
+    width: 32%;                
     min-width: 250px;          
 }
 
@@ -215,15 +215,18 @@ button.next {
     text-decoration: none;
 }
 
-.contact-section a {
-    font-size: 1.1rem;
-    text-decoration: none;
-}
-
 .contact-section a:hover {
     color: orange;
 }
 
+.contact-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.contact-list a{
+    padding-bottom: 10px;
+}
 .contact-logo-img a img{
     height:60px;
 }
