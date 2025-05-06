@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stack widgets vertically on smaller screens */
+    }
+
+    .single-contact-widget {
+        flex: 1 1 100%; /* Take full width */
+    }
+
+    .footer-logo-img img {
+        width: 50%; /* Adjust logo size on mobile */
+        height: auto;
+    }
+}
