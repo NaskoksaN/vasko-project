@@ -167,7 +167,7 @@ button.next {
     max-width: 600px;
     text-align: center;
 }
-
+/*---------------------------------*/
 .contact-section {
     background-color: #f8f9fa;
     padding: 40px;
@@ -177,12 +177,32 @@ button.next {
     margin-top: 40px;
 }
 
-.contact-section h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: bold;
+.contact-section .row {
+    display: flex;
+    flex-wrap: wrap;           
+    gap: 20px;
+    text-align: left;
 }
+
+.single-contact-widget {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+    width: 30%;                
+    min-width: 250px;          
+}
+
+.single-contact-widget a,
+.single-contact-widget span {
+    display: flex;
+    align-items: center;  
+    gap: 10px;           
+}
+
+.single-contact-widget i {
+    font-size: 25px;  
+}
+
 
 .contact-section p {
     font-size: 1.1rem;
@@ -192,19 +212,38 @@ button.next {
 
 .contact-section a {
     font-size: 1.1rem;
-    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-section a {
+    font-size: 1.1rem;
     text-decoration: none;
 }
 
 .contact-section a:hover {
-    color: #0056b3;
-    text-decoration: underline;
+    color: orange;
 }
 
-.contact-section p:last-child {
-    font-weight: bold;
-    color: #333;
+.contact-logo-img a img{
+    height:60px;
 }
+
+/* Social Icons */
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a i {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.social-icons a:hover i {
+    color: #0056b3;
+}
+/*------------------------------*/
 
 footer {
     background: #333;
